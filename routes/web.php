@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ResumeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [ResumeController::class, 'index']);
+Route::get('/projects', [ResumeController::class, 'projects']);
+Route::get('/resume', [ResumeController::class, 'resume']);
+Route::get('/contact', [ResumeController::class, 'contact']);
+Route::post('/contact', [ResumeController::class, 'formContact']);
