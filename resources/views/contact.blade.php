@@ -28,7 +28,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" action="/contact" method="POST" data-sb-form-api-token="">
+                        <form method="POST" >
                             @csrf
                             <!-- Name input-->
                             <div class="form-floating mb-3">
@@ -82,8 +82,4 @@
         </div>
     </section>
 </main>
-@endsection
-
-@section('js')
-<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 @endsection
